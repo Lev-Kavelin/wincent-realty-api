@@ -6,8 +6,8 @@ module.exports = ({ env }) => ({
         sites: [
           {
             name: 'wincent',
-            id: '511e1715-297d-47d1-a3ad-f5629ca6a9b7',
-            buildHook: 'https://api.netlify.com/build_hooks/639f4a69e97dd32c9f98ac17',
+            id: 'a622580f-ffee-4100-adda-5ebd8ef73e63',
+            buildHook: 'https://api.netlify.com/build_hooks/63a46298fb6de82a7c09cac6',
             branch: 'master' // optional
           }
         ]
@@ -26,6 +26,10 @@ module.exports = ({ env }) => ({
             },
           },
         },
+      },
+
+      seo: {
+        enabled: true,
       },
 
   });
