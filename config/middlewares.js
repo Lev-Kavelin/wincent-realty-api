@@ -1,6 +1,31 @@
 module.exports = [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            'wincent.fra1.cdn.digitaloceanspaces.com',
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            'wincent.fra1.cdn.digitaloceanspaces.com',
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
